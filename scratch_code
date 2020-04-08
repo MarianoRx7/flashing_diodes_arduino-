@@ -1,0 +1,111 @@
+int ledPins[] = {2,3,4,5,6,7,8,9};
+
+void setup()
+
+{
+
+int index;
+
+
+// for index = 2, index = 3, etc. all the way to index = 7.
+
+for(index = 0; index <= 7; index++)
+
+{
+
+pinMode(ledPins[index],OUTPUT);
+
+// ledPins[index] is replaced by the value in the array.
+
+// For example, ledPins[0] is 2
+
+}
+
+}
+
+void loop()
+
+{
+
+
+oneAfterAnotherNoLoop(); // Light up all the LEDs in turn
+
+}
+
+void oneAfterAnotherNoLoop()
+
+{
+
+int delayTime = 40.; // time (milliseconds) to pause between LEDs
+
+// make this smaller for faster switching
+
+// turn all the LEDs on:
+
+digitalWrite(ledPins[0], HIGH); //Turns on LED #0 (pin 2)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[1], HIGH); //Turns on LED #1 (pin 3)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[2], HIGH); //Turns on LED #2 (pin 4)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[3], HIGH); //Turns on LED #3 (pin 5)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[4], HIGH); //Turns on LED #4 (pin 6)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[5], HIGH); //Turns on LED #5 (pin 7)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[6], HIGH); //Turns on LED #6 (pin 8)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[7], HIGH); //Turns on LED #7 (pin 9)
+
+delay(delayTime); //wait delayTime milliseconds
+
+// turn all the LEDs off:
+
+digitalWrite(ledPins[0], LOW); //Turn off LED #7 (pin 9)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[1], LOW); //Turn off LED #6 (pin 8)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[2], LOW); //Turn off LED #5 (pin 7)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[3], LOW); //Turn off LED #4 (pin 6)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[4], LOW); //Turn off LED #3 (pin 5)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[5], LOW); //Turn off LED #2 (pin 4)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[6], LOW); //Turn off LED #1 (pin 3)
+
+delay(delayTime); //wait delayTime milliseconds
+
+digitalWrite(ledPins[7], LOW); //Turn off LED #0 (pin 2)
+
+delay(delayTime); //wait delayTime milliseconds
+
+}
